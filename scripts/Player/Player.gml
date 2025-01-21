@@ -12,3 +12,7 @@ function PlayerAnimateSprite(){
 		localFrame -= _totalFrames;
 	}else animationEnd = false;
 }
+
+function PlayerCollision(){
+	return (TileCollision() or EntityCollision());
+}

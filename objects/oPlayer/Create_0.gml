@@ -3,18 +3,26 @@
 state = PlayerStateFree;
 lastState = state;
 
+collisionMap = layer_tilemap_get_id(layer_get_id("Col"));
+
 hSpeed = 0;
 vSpeed = 0;
 speedWalk = 2.3;
+speedDodge = speedWalk + 3;
+distanceDodge = 64;
+dodgeMax = 2;
+dodgeRecharge = 3;
+dodgeTimer = 0;
+dodgeCount = dodgeMax;
 
 //animation variables.
 image_speed = 0;
 z = 0;
 animationEndScript = -1;
-//invulnerable = 0;
-//flashShader = shWhiteFlash;
-//flash =  0;
-//spriteRoll = sPlayerRoll;
+invulnerable = 0;
+flashShader = shWhiteFlash;
+flash =  0;
+spriteDodge = sPlayerDodge;
 spriteWalk = sPlayerWalk;
 spriteIdle = sPlayerIdle;
 localFrame = 0;
