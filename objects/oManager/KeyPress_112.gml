@@ -1,0 +1,1 @@
+if(!instance_exists(oPlayer)) instance_create_layer(128,128,layer,oPlayer);
