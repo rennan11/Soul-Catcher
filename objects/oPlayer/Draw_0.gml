@@ -1,3 +1,4 @@
+draw_set_alpha(1);
 draw_sprite(sPlayerShadow, 0, floor(x), floor(y));
 
 if  (invulnerable !=  0) and ((invulnerable mod 8 < 2) == 0) and (flash == 0){

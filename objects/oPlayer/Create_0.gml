@@ -26,3 +26,13 @@ spriteDodge = sPlayerDodge;
 spriteWalk = sPlayerWalk;
 spriteIdle = sPlayerIdle;
 localFrame = 0;
+
+// Stats
+hpMax = 200;
+hp = hpMax;
+hpRegen = 1;
+manaMax = 50;
+mana = manaMax;
+manaRegen = 0.2;
+regenTimerBase = 0.1;
+regenTimer = regenTimerBase;

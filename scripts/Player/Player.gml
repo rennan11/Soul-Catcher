@@ -16,3 +16,12 @@ function PlayerAnimateSprite(){
 function PlayerCollision(){
 	return (TileCollision() or EntityCollision());
 }
+
+function PlayerRegen() {
+	regenTimer += delta_time / 1000000;
+	if (regenTimer >= regenTimerBase) {
+		regenTimer = 0;
+		hp = min(hp+hpRegen,hpMax);
+		mana = min(mana+manaRegen,manaMax);
+	}
+}

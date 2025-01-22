@@ -7,6 +7,7 @@ keyAttack = keyboard_check_pressed(vk_shift);
 keyItem = keyboard_check_pressed(vk_control);
 keyItemSelectUp = keyboard_check_pressed(ord("E"));
 keyItemSelectDown = keyboard_check_pressed(ord("Q"));
+keyTest = keyboard_check_pressed(ord("T"));
 
 inputDirection = point_direction(0,0,keyRight-keyLeft,keyDown-keyUp);
 inputMagnitude = (keyRight - keyLeft != 0) or (keyDown - keyUp != 0);
@@ -24,4 +25,10 @@ if (global.gamePaused == false){
 			dodgeCount = min(dodgeCount + 1, dodgeMax);
 		}
 	}
+	PlayerRegen();
+}
+
+if(keyTest) {
+	hp = max(hp-20,0);
+	mana = max(mana-8,0);
 }
